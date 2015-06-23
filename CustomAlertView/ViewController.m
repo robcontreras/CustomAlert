@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "CustomIOSAlertView.h"
 
 @interface ViewController ()
 
@@ -22,6 +23,20 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+- (IBAction)showAlert:(id)sender{
+    
+    CustomIOSAlertView *alertView = [[CustomIOSAlertView alloc] init];
+    
+    UIView *customView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, 250.0, 300.0)];
+    customView.backgroundColor = [UIColor greenColor];
+    
+    [alertView setContainerView:customView];
+    
+    [alertView show];
+    
 }
 
 @end

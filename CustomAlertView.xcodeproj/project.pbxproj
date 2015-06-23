@@ -14,6 +14,9 @@
 		4C7C434B1B39F6FE00FF6F0B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C7C434A1B39F6FE00FF6F0B /* Images.xcassets */; };
 		4C7C434E1B39F6FE00FF6F0B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C7C434C1B39F6FE00FF6F0B /* LaunchScreen.xib */; };
 		4C7C435A1B39F6FE00FF6F0B /* CustomAlertViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7C43591B39F6FE00FF6F0B /* CustomAlertViewTests.m */; };
+		4C7C43651B39F71200FF6F0B /* CustomIOSAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7C43641B39F71200FF6F0B /* CustomIOSAlertView.m */; };
+		4C7C43671B39F74000FF6F0B /* iphone4.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C7C43661B39F74000FF6F0B /* iphone4.storyboard */; };
+		4C7C43691B39F75000FF6F0B /* iphone5.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C7C43681B39F75000FF6F0B /* iphone5.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,10 @@
 		4C7C43531B39F6FE00FF6F0B /* CustomAlertViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomAlertViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C7C43581B39F6FE00FF6F0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C7C43591B39F6FE00FF6F0B /* CustomAlertViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomAlertViewTests.m; sourceTree = "<group>"; };
+		4C7C43631B39F71200FF6F0B /* CustomIOSAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomIOSAlertView.h; sourceTree = "<group>"; };
+		4C7C43641B39F71200FF6F0B /* CustomIOSAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomIOSAlertView.m; sourceTree = "<group>"; };
+		4C7C43661B39F74000FF6F0B /* iphone4.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iphone4.storyboard; sourceTree = "<group>"; };
+		4C7C43681B39F75000FF6F0B /* iphone5.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iphone5.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +88,8 @@
 		4C7C433C1B39F6FE00FF6F0B /* CustomAlertView */ = {
 			isa = PBXGroup;
 			children = (
+				4C7C43631B39F71200FF6F0B /* CustomIOSAlertView.h */,
+				4C7C43641B39F71200FF6F0B /* CustomIOSAlertView.m */,
 				4C7C43411B39F6FE00FF6F0B /* AppDelegate.h */,
 				4C7C43421B39F6FE00FF6F0B /* AppDelegate.m */,
 				4C7C43441B39F6FE00FF6F0B /* ViewController.h */,
@@ -89,6 +98,8 @@
 				4C7C434A1B39F6FE00FF6F0B /* Images.xcassets */,
 				4C7C434C1B39F6FE00FF6F0B /* LaunchScreen.xib */,
 				4C7C433D1B39F6FE00FF6F0B /* Supporting Files */,
+				4C7C43661B39F74000FF6F0B /* iphone4.storyboard */,
+				4C7C43681B39F75000FF6F0B /* iphone5.storyboard */,
 			);
 			path = CustomAlertView;
 			sourceTree = "<group>";
@@ -199,7 +210,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C7C43671B39F74000FF6F0B /* iphone4.storyboard in Resources */,
 				4C7C43491B39F6FE00FF6F0B /* Main.storyboard in Resources */,
+				4C7C43691B39F75000FF6F0B /* iphone5.storyboard in Resources */,
 				4C7C434E1B39F6FE00FF6F0B /* LaunchScreen.xib in Resources */,
 				4C7C434B1B39F6FE00FF6F0B /* Images.xcassets in Resources */,
 			);
@@ -219,6 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C7C43651B39F71200FF6F0B /* CustomIOSAlertView.m in Sources */,
 				4C7C43461B39F6FE00FF6F0B /* ViewController.m in Sources */,
 				4C7C43431B39F6FE00FF6F0B /* AppDelegate.m in Sources */,
 				4C7C43401B39F6FE00FF6F0B /* main.m in Sources */,
@@ -348,6 +362,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CustomAlertView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -358,6 +373,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CustomAlertView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

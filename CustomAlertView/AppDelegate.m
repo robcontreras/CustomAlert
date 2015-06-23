@@ -17,6 +17,40 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    UIViewController *initialViewController = nil;
+    
+    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+    {
+    
+        CGSize result = [[UIScreen mainScreen] bounds].size;
+        if(result.height == 480)
+        {
+            NSLog(@"iPhone 3,5 Inch");
+            
+            UIStoryboard *i4SB = [UIStoryboard storyboardWithName:@"iphone4" bundle:nil];
+            initialViewController = [i4SB instantiateInitialViewController];
+            
+            
+        }
+        if(result.height == 568)
+        {
+            NSLog(@"iPhone 4 Inch");
+            UIStoryboard *i5SB = [UIStoryboard storyboardWithName:@"iphone5" bundle:nil];
+            initialViewController = [i5SB instantiateInitialViewController];
+        }
+    }
+    
+    // Instantiate a UIWindow object and initialize it with the screen size of the iOS device
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    // Set the initial view controller to be the root view controller of the window object
+    self.window.rootViewController  = initialViewController;
+    
+    // Set the window object to be the key window and show it
+    [self.window makeKeyAndVisible];
+
+    
     return YES;
 }
 
